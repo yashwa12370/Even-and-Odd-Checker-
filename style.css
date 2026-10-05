@@ -1,0 +1,112 @@
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;min-height:100vh;color:#fff;
+background:#080b18;display:flex;justify-content:center;
+padding:30px 15px;transition:.3s
+}
+
+body:before{
+content:"";position:fixed;width:420px;height:420px;
+background:#6546ff;filter:blur(150px);opacity:.22;
+top:-130px;left:-120px;z-index:-1
+}
+
+.app{
+width:100%;max-width:520px;padding:25px;
+border:1px solid #ffffff18;border-radius:28px;
+background:#ffffff09;backdrop-filter:blur(18px);
+box-shadow:0 20px 60px #0008
+}
+
+header{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:3px;font-size:18px}
+
+header button,.buttons button,.recent-head button{
+border:1px solid #ffffff20;background:#ffffff0c;color:#fff;
+border-radius:12px;padding:10px 15px;cursor:pointer
+}
+
+.tag{
+color:#9b8cff;font-size:11px;font-weight:bold;
+letter-spacing:2px;margin-top:45px
+}
+
+h1{font-size:36px;margin:8px 0}
+.sub{color:#9ca3b5;font-size:14px;line-height:1.5;margin-bottom:25px}
+
+input{
+width:100%;padding:20px;border-radius:17px;
+border:1px solid #ffffff20;background:#070a14;
+color:#fff;font-size:25px;text-align:center;outline:none
+}
+
+input:focus{border-color:#806cff;box-shadow:0 0 20px #765cff25}
+
+.buttons{display:flex;gap:8px;margin:12px 0 18px}
+.buttons button{font-size:12px}
+#check{flex:1;background:#7157ff;border:0;font-weight:bold}
+
+.result{
+text-align:center;padding:24px;border-radius:22px;
+background:linear-gradient(145deg,#765cff22,#ffffff08);
+border:1px solid #ffffff15
+}
+
+.result span{
+display:block;font-size:28px;font-weight:bold;margin-bottom:5px
+}
+
+.result small{color:#9299ad;letter-spacing:2px}
+.result strong{display:block;font-size:32px;margin:8px 0}
+.result p{color:#aab0c0;font-size:13px}
+
+.stats{
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:10px;margin:15px 0
+}
+
+.stats div{
+text-align:center;padding:16px 5px;border-radius:17px;
+background:#ffffff08;border:1px solid #ffffff12
+}
+
+.stats b{display:block;font-size:23px}
+.stats span{font-size:9px;color:#858da2;letter-spacing:1px}
+
+.recent{padding-top:5px}
+.recent-head{
+display:flex;justify-content:space-between;align-items:center;
+margin-bottom:10px
+}
+
+.recent h3{font-size:14px}
+
+.recent-head button{
+padding:7px 11px;font-size:11px;color:#ff7b8a
+}
+
+ul{list-style:none}
+
+li{
+display:flex;justify-content:space-between;
+padding:11px 13px;margin:6px 0;border-radius:12px;
+background:#ffffff06;color:#c8ccda;font-size:13px
+}
+
+li b{color:#9b8cff}
+
+.even-icon{color:#55e6a5}
+.odd-icon{color:#ff6578}
+
+.light{background:#eef1f8;color:#171827}
+.light .app{background:#fff;border-color:#00000010}
+.light input{background:#f2f3f8;color:#171827}
+.light header button,.light .buttons button{color:#171827}
+.light .sub,.light .result p{color:#656b7b}
+
+@media(max-width:480px){
+.app{padding:20px;border-radius:23px}
+h1{font-size:30px}
+.tag{margin-top:35px}
+}
